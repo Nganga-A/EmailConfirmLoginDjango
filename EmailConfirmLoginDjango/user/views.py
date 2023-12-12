@@ -25,7 +25,7 @@ def register(request):
             email = form.cleaned_data.get('email')
 
             ######################### Email Sending Section #################################### 
-            htmly = get_template('user/Email.html')
+            htmly = get_template('Email.html')
             d = { 'username': username }
             subject, from_email, to = 'welcome', 'your_email@gmail.com', email
             html_content = htmly.render(d)
@@ -37,7 +37,7 @@ def register(request):
             return redirect('login')
     else:
         form = UserRegisterForm()
-    return render(request, 'user/register.html', {'form': form, 'title':'register here'})
+    return render(request, 'register.html', {'form': form, 'title':'register here'})
   
 ################ login forms################################################### 
 def Login(request):
