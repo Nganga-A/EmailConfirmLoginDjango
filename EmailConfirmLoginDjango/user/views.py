@@ -12,7 +12,7 @@ from django.template import Context
 
 # Index
 def index(request):
-    return render(request, 'user/index.html', {'title': 'Index'})
+    return render(request, 'user/templates/index.html', {'title': 'Index'})
 
 
 # register here 
