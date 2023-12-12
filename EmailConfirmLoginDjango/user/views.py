@@ -57,4 +57,4 @@ def Login(request):
             messages.info(request, f'account done not exit please sign in')
     
     form = AuthenticationForm()
-    return render(request, 'user/login.html', {'form':form, 'title':'log in'})
+    return render(request, 'login.html', {'form':form, 'title':'log in'})
